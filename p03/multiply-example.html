@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  
+    <meta charset="UTF-8" />
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0" /> -->
+    <title>Simple A-Frame Multiplicative Blending</title>
+    
+  </head>
+  <body>
+	<script src="../js/aframe.min.js"></script>
+    <a-scene>
+      <!-- Plane 1 with red color -->
+	  
+	  
+      <a-plane position="0 0 -4" rotation="-45 0 0" width="4" height="4" color="#090000"
+	  material="shader: flat; blending: multiply"></a-plane>
+	  ></a-plane>
+	  
+	  <a-plane position="0 0 -4" rotation="45 0 0" width="4" height="4" color="#11ff00"></a-plane>
+      <a-sky color="#000000"></a-sky>
+    
+	
+   
+      <!-- Camera -->
+      <a-camera position="0 1 4"></a-camera>
+    </a-scene>
+  </body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://aframe.io/releases/1.7.1/aframe.min.js"></script> 
+  </head>
+  <body>
+	 <script>
+     document.addEventListener('DOMContentLoaded', () => {
+        const isLocal = ['localhost','127.0.0.1','[::1]'].includes(location.hostname);
+        const src = isLocal
+          ? 'http://localhost:8000/p02/IMAGES/brick_diffuse.jpg'
+          : './IMAGES/brick_diffuse.jpg';
+
+        const img = document.getElementById('bricks');
+        img.setAttribute('src', src);        // set it
+
+        // once assets are ready, use it
+        document.querySelector('a-assets').addEventListener('loaded', () => {
+          document.getElementById('PGB_sphere')
+            .setAttribute('material', 'src: #bricks');
+        });
+      });
+      </script>
+    <a-assets>
+        <img id="bricks" src="#bricks" crossorigin="anonymous">
+      </a-assets>
+    <a-scene>
+      <a-sphere  id="PGB_sphere" position="0 2 -1.5" wireframe="false" rotation="0 0 0" 
+	        src="#bricks"
+	  ></a-sphere>
+    </a-scene>
+  </body>
+</html>

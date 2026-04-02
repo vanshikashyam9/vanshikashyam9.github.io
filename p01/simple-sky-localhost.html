@@ -1,0 +1,24 @@
+
+<html>
+  <head>
+    <script src="https://aframe.io/releases/1.7.1/aframe.min.js"></script>
+  </head>
+  <body>
+  <!-- <script src="../js/aframe.min.js"></script> -->
+    <a-assets>
+        <img id="nebula" src="http://localhost:8000/p01/IMAGES/heic2007a.jpg" crossorigin="anonymous">
+      </a-assets>
+      <a-scene>
+        <a-sky
+          src="#nebula"	position="-2.5  0 -1.5"
+        ></a-sky>	  
+        <a-text
+          font="kelsonsans"
+          color = "#FFFFFF"
+          value="HELLO A-Frame from EARTH!!!"
+          width="6"
+      position="0 -1 -5"
+        ></a-text>
+    </a-scene>
+  </body>
+</html>

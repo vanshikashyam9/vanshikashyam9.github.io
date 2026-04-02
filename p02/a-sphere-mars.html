@@ -1,0 +1,31 @@
+<html>
+  <head>
+      <script src="https://aframe.io/releases/1.7.1/aframe.min.js"></script>  
+  </head>
+  <body>
+	 <script>
+     document.addEventListener('DOMContentLoaded', () => {
+        const isLocal = ['localhost','127.0.0.1','[::1]'].includes(location.hostname);
+        const src = isLocal
+          ? 'http://localhost:8000/p02/IMAGES/mars-surface.avif'
+          : './IMAGES/mars-surface.avif';
+
+        const img = document.getElementById('mars');
+        img.setAttribute('src', src);        // set it
+
+        // once assets are ready, use it
+        document.querySelector('a-assets').addEventListener('loaded', () => {
+          document.getElementById('PGB_sphere')
+            .setAttribute('material', 'src: #mars');
+        });
+      });
+      </script>
+    <a-scene>
+      <a-assets>
+        <img id="mars" src="#mars" crossorigin="anonymous">
+      </a-assets>
+		
+		<a-sphere  id="PGB_sphere" position="0 2 -1.5" src="#mars" rotation="0 0 0" ></a-sphere>
+    </a-scene>
+  </body>
+</html>

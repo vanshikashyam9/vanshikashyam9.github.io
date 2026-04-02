@@ -1,0 +1,26 @@
+
+<html>
+  <head>
+  </head>
+  <body>
+	 
+	<script src="https://aframe.io/releases/1.7.1/aframe.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/gh/n5ro/aframe-physics-system@v4.0.1/dist/aframe-physics-system.min.js"></script> 
+	<a-scene physics="gravity: 0 -9.8 0; debug: false">
+
+	<a-assets>
+		<img id="spaceShipGLB" src="http://localhost:8000/p07/IMAGES/SpaceShip.glb" crossorigin="anonymous">
+		<img id="mars" src="http://localhost:8000/p07/IMAGES/mars-surface.avif" crossorigin="anonymous">
+	</a-assets>
+
+	<a-entity id="spaceShip"
+      gltf-model="#spaceShipGLB"
+      position="5 5 -5" scale="2 2 2" 
+	  animation="property: position; to: -5 5 -5; dur: 20000; easing: easeInOutQuad; loop: false"></a-box>
+	  
+	  ></a-entity>
+	  <a-plane position="0 0 -4" rotation="-90 0 0" width="4" height="4" src="#mars" static-body></a-plane>
+	  <a-sky color="#ECECEC"></a-sky>
+	</a-scene>
+ </body>
+</html>

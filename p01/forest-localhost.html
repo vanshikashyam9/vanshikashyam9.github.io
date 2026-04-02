@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+     <script src="https://aframe.io/releases/1.7.1/aframe.min.js" crossorigin="anonymous"></script>
+     
+     
+  </head>
+  <body>
+    <script>
+      function localHostOrNot() {
+        if (window.location.hostname === 'localhost' || 
+            window.location.hostname === '127.0.0.1' || 
+            window.location.hostname === '[::1]') {
+            console.log('Running on localhost');
+            alert('Running on localhost');
+            // Perform actions specific to localhost environment
+          } else {
+            console.log('Not running on localhost');
+            alert('Not running on localhost');
+          }
+      }
+      localHostOrNot();
+      </script>
+    <a-scene>
+      <a-assets>
+        <img id="forest" src="http://localhost:8000/p01/IMAGES/Moving_Forest_1050_700.webp" crossorigin="anonymous">
+      </a-assets>
+      <a-sky
+        src="#forest"	position="-2.5  0 -1.5"
+      ></a-sky>
+      <a-text
+        font="kelsonsans"
+        value="HELLO A-Frame!!!"
+        width="6"
+        position="-2.5  1.5 -2.5"  <!-- Position ! -->
+      ></a-text>
+    </a-scene>
+  </body>
+</html>

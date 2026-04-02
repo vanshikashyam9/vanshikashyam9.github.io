@@ -1,0 +1,23 @@
+<html>
+  <head>
+    <script src="https://aframe.io/releases/1.7.1/aframe.min.js"></script>
+  </head>
+  <body>
+	<!-- <script src="../js/aframe.min.js"></script> -->
+    <a-scene>
+
+
+    <a-entity id="direct-light"
+            light="type: directional; color: #BBBBBB; intensity: 1; target: #light-target"
+            position="-10 20 10">
+    </a-entity>
+
+    <a-entity id="light-target"
+            position="-5 2 -7"
+            animation="property: position; to: 5 2 -7; dur: 3000; loop: true; dir: alternate">
+            <a-box material="color: #ffffff; metalness: 0; roughness: 0.4" ></a-box>
+    </a-entity>
+
+</a-scene>
+  </body>
+</html>

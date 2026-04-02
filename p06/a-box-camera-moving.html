@@ -1,0 +1,26 @@
+
+<html>
+  <head>
+    <script src="https://aframe.io/releases/1.7.1/aframe.min.js"></script> 
+  </head>
+  <body>
+	<!-- <script src="../js/aframe.min.js"></script> -->
+    <a-scene>
+	
+	<a-entity id="rig" position="0 1.6 4"
+                animation="property: position; 
+                           to: 0 1.6 -6; 
+                           dur: 4000; 
+                           dir: alternate; 
+                           loop: true; 
+                           easing: linear">
+        
+        <a-camera look-controls="enabled: true"></a-camera>
+     </a-entity>
+	  
+      <a-box  id="PGB box" position="0 2 -5" rotation="45 45 45" color="green">
+	  </a-box>
+
+    </a-scene>
+  </body>
+</html>
