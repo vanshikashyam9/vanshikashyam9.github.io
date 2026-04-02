@@ -5,7 +5,7 @@
     <script src="https://aframe.io/releases/1.7.1/aframe.min.js"></script>
   </head>
   <body>
-    <a-scene background="color: #050505">
+    <a-scene>
 
       <!-- Asset Management System (Loads all 9 Textures) -->
       <a-assets>
@@ -18,6 +18,7 @@
         <img id="saturn" src="textures/saturn.jpg">
         <img id="uranus" src="textures/uranus.jpg">
         <img id="neptune" src="textures/neptune.jpg">
+        <img id="stars" src="textures/stars.jpg">
       </a-assets>
 
       <!-- Camera with WASD Controls -->
@@ -83,6 +84,9 @@
       <a-entity animation="property: rotation; to: 0 360 0; dur: 45000; loop: true; easing: linear">
         <a-sphere src="#neptune" radius="1.3" position="42 0 0" animation="property: rotation; to: 0 360 0; dur: 1500; loop: true; easing: linear"></a-sphere>
       </a-entity>
+
+      <!-- Background stars (simple sky) -->
+      <a-sky src="#stars"></a-sky>
 
     </a-scene>
   </body>
