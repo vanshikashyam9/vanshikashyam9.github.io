@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>3D Solar System (Task 2)</title>
+    <script src="https://aframe.io/releases/1.7.1/aframe.min.js"></script>
+  </head>
+  <body>
+    <a-scene background="color: #050505">
+
+      <!-- Asset Management System (Loads all 9 Textures) -->
+      <a-assets>
+        <img id="sun" src="textures/sun.jpg">
+        <img id="mercury" src="textures/mercury.jpg">
+        <img id="venus" src="textures/venus.jpg">
+        <img id="earth" src="textures/earth.jpg">
+        <img id="mars" src="textures/mars.jpg">
+        <img id="jupiter" src="textures/jupiter.jpg">
+        <img id="saturn" src="textures/saturn.jpg">
+        <img id="uranus" src="textures/uranus.jpg">
+        <img id="neptune" src="textures/neptune.jpg">
+      </a-assets>
+
+      <!-- Camera with WASD Controls -->
+      <a-entity position="0 20 40" rotation="-15 0 0">
+        <a-camera look-controls wasd-controls="fly: true; acceleration: 60" position="0 0 0"></a-camera>
+      </a-entity>
+
+      <!-- Environment Lighting -->
+      <a-light type="ambient" color="#222"></a-light>
+      <!-- Point light at the center representing the Sun's light -->
+      <a-light type="point" position="0 0 0" color="#fff" intensity="2"></a-light>
+
+      <!-- 
+         THE SUN 
+         Includes custom shader, glowing color change animation, and it spins on its axis 
+      -->
+      <a-sphere 
+        id="sun-sphere" 
+        src="#sun" 
+        radius="6" 
+        position="0 0 0" 
+        material="shader: flat; color: #FFF5CC;"
+        animation="property: material.color; dir: alternate; dur: 5000; loop: true; from: #FFF5CC; to: #FF8800;"
+        animation__spin="property: rotation; to: 0 360 0; dur: 20000; loop: true; easing: linear">
+      </a-sphere>
+
+      <!-- MERCURY -->
+      <a-entity animation="property: rotation; to: 0 360 0; dur: 4000; loop: true; easing: linear">
+        <a-sphere src="#mercury" radius="0.3" position="9 0 0" animation="property: rotation; to: 0 360 0; dur: 2000; loop: true; easing: linear"></a-sphere>
+      </a-entity>
+
+      <!-- VENUS -->
+      <a-entity animation="property: rotation; to: 0 360 0; dur: 6000; loop: true; easing: linear">
+        <a-sphere src="#venus" radius="0.9" position="11 0 0" animation="property: rotation; to: 0 360 0; dur: 3000; loop: true; easing: linear"></a-sphere>
+      </a-entity>
+
+      <!-- EARTH -->
+      <a-entity animation="property: rotation; to: 0 360 0; dur: 8000; loop: true; easing: linear">
+        <a-sphere src="#earth" radius="1" position="14 0 0" animation="property: rotation; to: 0 360 0; dur: 2500; loop: true; easing: linear"></a-sphere>
+      </a-entity>
+
+      <!-- MARS -->
+      <a-entity animation="property: rotation; to: 0 360 0; dur: 11000; loop: true; easing: linear">
+        <a-sphere src="#mars" radius="0.5" position="17 0 0" animation="property: rotation; to: 0 360 0; dur: 2600; loop: true; easing: linear"></a-sphere>
+      </a-entity>
+
+      <!-- JUPITER -->
+      <a-entity animation="property: rotation; to: 0 360 0; dur: 20000; loop: true; easing: linear">
+        <a-sphere src="#jupiter" radius="3" position="23 0 0" animation="property: rotation; to: 0 360 0; dur: 1000; loop: true; easing: linear"></a-sphere>
+      </a-entity>
+
+      <!-- SATURN -->
+      <a-entity animation="property: rotation; to: 0 360 0; dur: 28000; loop: true; easing: linear">
+        <a-sphere src="#saturn" radius="2.5" position="31 0 0" animation="property: rotation; to: 0 360 0; dur: 1100; loop: true; easing: linear"></a-sphere>
+      </a-entity>
+
+      <!-- URANUS -->
+      <a-entity animation="property: rotation; to: 0 360 0; dur: 36000; loop: true; easing: linear">
+        <a-sphere src="#uranus" radius="1.4" position="37 0 0" animation="property: rotation; to: 0 360 0; dur: 1500; loop: true; easing: linear"></a-sphere>
+      </a-entity>
+
+      <!-- NEPTUNE -->
+      <a-entity animation="property: rotation; to: 0 360 0; dur: 45000; loop: true; easing: linear">
+        <a-sphere src="#neptune" radius="1.3" position="42 0 0" animation="property: rotation; to: 0 360 0; dur: 1500; loop: true; easing: linear"></a-sphere>
+      </a-entity>
+
+    </a-scene>
+  </body>
+</html>
