@@ -1,14 +1,39 @@
-﻿# IEEE CCWC - 2026
-##
-## UNLV University of Nevada, Las Vegas
-#  https://ieee-ccwc.org/
-#
+# CMPT 461 Immersive Computing: Assignment #5
 
-> git clone https://github.com/wonder-phil/wonder-phil.github.io <br />
-> In a browser go to wonder-phil.github.io
+Welcome to my repository for CMPT 461 Immersive Computing! This repository contains all of my completed deliverables for Assignment #5, covering foundational A-Frame concepts, immersive 3D textures, CORS proxy integrations, and a fully interactive Solar System simulation.
 
+## Task 1: A-Frame Exercises
 
+I have fully completed the 8 foundational exercises across the various project folders (`p01` through `p05`). All of the completed HTML pages are live on GitHub Pages.
 
+**Key highlights from Task 1:**
+* **Exercise 1 & 1b:** Set up an initial A-Frame scene with sky and basic geometric text capabilities.
+* **Exercise 2-1:** Deployed an immersive Seattle skyline 360-degree environment utilizing local High-Resolution textures (`over-seattle.html`).
+* **Exercise 2-2:** Demonstrated CORS security protocol bypasses for A-Frame components by fetching remote Wikimedia textures via an active proxy.
+* **Exercise 4-1:** Successfully configured and verified complex animated spinning geometries by applying realistic textures to rotating primitives (`p04/a-cube-containing-sphere-texture.html`).
+* **Exercise 4-2:** Manipulated individual 3D Platonic solids by applying isolated rotational animations (`p04/a-Platonic-solids.html`).
+* **Exercise 5-1:** Connected A-Frame raycaster instances to interactive click events, changing colors of multiple cubes dynamically upon user interaction (`p05/a-boxs-events-test.html`).
 
+---
 
+## Task 2: 3D Solar System Simulation
 
+This is the flagship 3D project of the assignment. It features a fully-textured, fully-interactive replica of our Solar System built entirely from scratch in A-Frame.
+
+**Live Link:** [View 3D Solar System](https://vanshikashyam9.github.io/solar-system/index.html)
+
+**Features & Rubric Requirements Met:**
+* **Complete Solar System:** Features The Sun accompanied by all **8 Planets** (Mercury, Venus, Earth, Mars, Jupiter, Saturn, Uranus, Neptune).
+* **High Definition Textures (10 Marks):** I securely sourced and integrated distinct, high-quality 2K/4K equirectangular texture maps for every single planet and the Sun.
+* **Animation / Orbiting (10 Marks):** All planets realistically orbit circularly around the Sun using custom invisible pivot entities, and each completes its orbit at mathematically varying speeds.
+* **Sun Color Change (5 Marks):** Using embedded A-Frame color animation properties, the Sun seamlessly glows and cycles its internal light source between bright yellow and deep orange as the planets orbit.
+* **Space Skybox:** Utilizes a highly realistic 2K representation of the starry Milky Way as a 360-degree immersive skybox mapping.
+* **Extra Work / Details (4 Marks):**
+  * Embedded dynamically orbiting `<a-text>` labels directly above each rotating planet so the user knows exactly what they are looking at.
+  * Added immersive lighting (central `point` light inside the Sun) to simulate true day/night shadows across all orbiting planets.
+  * Integrated full interactive `WASD` flying controls and 3D look-controls.
+  * Built fully responsive `VR-Mini` configurations out-of-the-box via A-Frame's WebXR components.
+
+## How to Test
+1. Make sure to allow GitHub Pages 1-2 minutes to completely spin up the build, especially on the Solar System project due to the ultra-high resolution planet textures!
+2. All projects are available right from the root `vanshikashyam9.github.io` GitHub Pages URL!
