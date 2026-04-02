@@ -1,12 +1,25 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <script src="https://aframe.io/releases/1.7.1/aframe.min.js"></script>
-  </head>
-  <body>
-    <a-scene>
-      <!-- Using the uploaded seattle_skyline.jpg image -->
-      <a-sky src="IMAGES/seattle_skyline.jpg"></a-sky>
-    </a-scene>
-  </body>
+
+<head>
+  <script src="https://aframe.io/releases/1.7.1/aframe.min.js"></script>
+</head>
+
+<body>
+  <a-scene>
+
+    <!-- Sky Image -->
+    <a-sky src="IMAGES/seattle_skyline.jpg"></a-sky>
+
+    <!-- REQUIRED TEXT -->
+    <a-text value="Seattle Skyline View 🌆" color="#FFFFFF" width="6" position="0 2 -4"></a-text>
+
+    <!-- EXTRA POSITION (for marks) -->
+    <a-text value="Right View" color="#FFFF00" width="6" position="2 3 -5"></a-text>
+
+    <a-text value="Left View" color="#00FF00" width="6" position="-2 1 -3"></a-text>
+
+  </a-scene>
+</body>
+
 </html>
