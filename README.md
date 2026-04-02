@@ -1,12 +1,8 @@
 # CMPT 461 Immersive Computing: Assignment #5
 
-Welcome to my repository for CMPT 461 Immersive Computing! This repository contains all of my completed deliverables for Assignment #5, covering foundational A-Frame concepts, immersive 3D textures, CORS proxy integrations, and a fully interactive Solar System simulation.
+Welcome to my repository for CMPT 461 Immersive Computing! 
 
-## Task 1: A-Frame Exercises
-
-I have fully completed the 8 foundational exercises across the various project folders (`p01` through `p05`). All of the completed HTML pages are live on GitHub Pages.
-
-**Key highlights from Task 1:**
+**Task 1:**
 * **Exercise 1 & 1b:** Set up an initial A-Frame scene with sky and basic geometric text capabilities.
 * **Exercise 2-1:** Deployed an immersive Seattle skyline 360-degree environment utilizing local High-Resolution textures (`over-seattle.html`).
 * **Exercise 2-2:** Demonstrated CORS security protocol bypasses for A-Frame components by fetching remote Wikimedia textures via an active proxy.
@@ -18,21 +14,15 @@ I have fully completed the 8 foundational exercises across the various project f
 
 ## Task 2: 3D Solar System Simulation
 
-This is the flagship 3D project of the assignment. It features a fully-textured, fully-interactive replica of our Solar System built entirely from scratch in A-Frame.
+This is 3D project of the assignment. It features a fully-textured, fully-interactive replica of our Solar System built entirely from scratch in A-Frame.
 
 **Live Link:** [View 3D Solar System](https://vanshikashyam9.github.io/solar-system/index.html)
 
-**Features & Rubric Requirements Met:**
+**Features:**
 * **Complete Solar System:** Features The Sun accompanied by all **8 Planets** (Mercury, Venus, Earth, Mars, Jupiter, Saturn, Uranus, Neptune).
-* **High Definition Textures (10 Marks):** I securely sourced and integrated distinct, high-quality 2K/4K equirectangular texture maps for every single planet and the Sun.
-* **Animation / Orbiting (10 Marks):** All planets realistically orbit circularly around the Sun using custom invisible pivot entities, and each completes its orbit at mathematically varying speeds.
-* **Sun Color Change (5 Marks):** Using embedded A-Frame color animation properties, the Sun seamlessly glows and cycles its internal light source between bright yellow and deep orange as the planets orbit.
+* **Animation / Orbiting :** All planets realistically orbit circularly around the Sun using custom invisible pivot entities, and each completes its orbit at mathematically varying speeds.
+* **Sun Color Change:** Using embedded A-Frame color animation properties, the Sun seamlessly glows and cycles its internal light source between bright yellow and deep orange as the planets orbit.
 * **Space Skybox:** Utilizes a highly realistic 2K representation of the starry Milky Way as a 360-degree immersive skybox mapping.
-* **Extra Work / Details (4 Marks):**
-  * Embedded dynamically orbiting `<a-text>` labels directly above each rotating planet so the user knows exactly what they are looking at.
-  * Added immersive lighting (central `point` light inside the Sun) to simulate true day/night shadows across all orbiting planets.
-  * Integrated full interactive `WASD` flying controls and 3D look-controls.
-  * Built fully responsive `VR-Mini` configurations out-of-the-box via A-Frame's WebXR components.
 
 ## How to Test
 1. Make sure to allow GitHub Pages 1-2 minutes to completely spin up the build, especially on the Solar System project due to the ultra-high resolution planet textures!
